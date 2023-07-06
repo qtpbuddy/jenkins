@@ -1,0 +1,1781 @@
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue Jul  4 11:31:37 AM UTC
+
+  System load:  0.10107421875      Processes:
+  Usage of /:   23.2% of 28.37GB   Users logged in:
+  Memory usage: 10%                IPv4 address for en
+  Swap usage:   0%
+
+
+ * Introducing Expanded Security Maintenance for Appli
+   Receive updates to over 25,000 software packages wi
+   Ubuntu Pro subscription. Free for personal use.
+
+     https://ubuntu.com/pro
+
+Expanded Security Maintenance for Applications is not
+
+56 updates can be applied immediately.
+To see these additional updates run: apt list --upgrad
+
+Enable ESM Apps to receive additional future security
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue Jul  4 09:50:25 2023
+prasad@jenkins:~$ sudo su -
+[sudo] password for prasad:
+root@jenkins:~# git --version
+git version 2.34.1
+root@jenkins:~# mkdir jenkins-project
+root@jenkins:~# cd jenkins-project
+root@jenkins:~/jenkins-project# ls-la
+ls-la: command not found
+root@jenkins:~/jenkins-project# ls -la
+total 8
+drwxr-xr-x 2 root root 4096 Jul  4 11:37 .
+drwx------ 5 root root 4096 Jul  4 11:37 ..
+root@jenkins:~/jenkins-project# git init
+hint: Using 'master' as the name for the initial brance
+hint: is subject to change. To configure the initial b
+hint: of your new repositories, which will suppress th
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'm
+hint: 'development'. The just-created branch can be re
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /root/jenkins-proj
+root@jenkins:~/jenkins-project# touch a
+root@jenkins:~/jenkins-project# ls
+a
+root@jenkins:~/jenkins-project# vi a
+root@jenkins:~/jenkins-project# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be
+        a
+
+nothing added to commit but untracked files present (u
+root@jenkins:~/jenkins-project# git commit -m "first c
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this reposit
+
+fatal: unable to auto-detect email address (got 'root@
+root@jenkins:~/jenkins-project# git config --global us
+root@jenkins:~/jenkins-project# git config --global usom"
+root@jenkins:~/jenkins-project# git commit -m "first p
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be
+        a
+
+nothing added to commit but untracked files present (u
+root@jenkins:~/jenkins-project# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be
+        a
+
+nothing added to commit but untracked files present (u
+root@jenkins:~/jenkins-project# git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+root@jenkins:~/jenkins-project# ls -la
+total 12
+drwxr-xr-x 3 root root 4096 Jul  4 11:43 .
+drwx------ 5 root root 4096 Jul  4 11:53 ..
+-rw-r--r-- 1 root root    0 Jul  4 11:43 a
+drwxr-xr-x 7 root root 4096 Jul  4 11:55 .git
+root@jenkins:~/jenkins-project#
+root@jenkins:~/jenkins-project# ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue t qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qup default qlen 1000
+    link/ether 00:0c:29:8d:78:9b brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.63.129/24 metric 100 brd 192.168.63.2s33
+       valid_lft 1240sec preferred_lft 1240sec
+    inet6 fe80::20c:29ff:fe8d:789b/64 scope link
+       valid_lft forever preferred_lft forever
+root@jenkins:~/jenkins-project# ls -la
+total 12
+drwxr-xr-x 3 root root 4096 Jul  4 11:43 .
+drwx------ 5 root root 4096 Jul  4 11:53 ..
+-rw-r--r-- 1 root root    0 Jul  4 11:43 a
+drwxr-xr-x 7 root root 4096 Jul  4 11:55 .git
+root@jenkins:~/jenkins-project# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be
+        a
+
+nothing added to commit but untracked files present (u
+root@jenkins:~/jenkins-project# git help
+usage: git [--version] [--help] [-C <path>] [-c <name>
+           [--exec-path[=<path>]] [--html-path] [--man
+           [-p | --paginate | -P | --no-pager] [--no-r
+           [--git-dir=<path>] [--work-tree=<path>] [--
+           [--super-prefix=<path>] [--config-env=<name
+           <command> [<args>]
+
+These are common Git commands used in various situatio
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reiniti
+
+work on the current change (see also: git help everyda
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a
+   restore   Restore working tree files
+   rm        Remove files from the working tree and fr
+
+examine the history and state (see also: git help revi
+   bisect    Use binary search to find the commit that
+   diff      Show changes between commits, commit and
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories to
+   rebase    Reapply commits on top of another base ti
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag obje
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another re
+   pull      Fetch from and integrate with another rep
+   push      Update remote refs along with associated
+
+'git help -a' and 'git help -g' list available subcomm
+concept guides. See 'git help <command>' or 'git help
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+root@jenkins:~/jenkins-project# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be
+        a
+
+nothing added to commit but untracked files present (u
+root@jenkins:~/jenkins-project# git commit -m "test"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be
+        a
+
+nothing added to commit but untracked files present (u
+root@jenkins:~/jenkins-project# git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+root@jenkins:~/jenkins-project# git add .
+root@jenkins:~/jenkins-project# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   a
+
+root@jenkins:~/jenkins-project# git commit -m "test"
+[master (root-commit) d43f7d4] test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a
+root@jenkins:~/jenkins-project# git status
+On branch master
+nothing to commit, working tree clean
+root@jenkins:~/jenkins-project# ls
+a
+root@jenkins:~/jenkins-project# ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/root/.ssh/id_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /root/.ssh/id_rs
+Your public key has been saved in /root/.ssh/id_rsa.pu
+The key fingerprint is:
+SHA256:sKCsHPOsbFqujjDnskIEt+nB0I7H2JVvx4LtYlijLy0 roo
+The key's randomart image is:
++---[RSA 3072]----+
+| .   .           |
+|o o o            |
+|.X +.+..         |
+|ooX.+.=oo        |
+|.=o= +.oS        |
+|.oO o .          |
+|=.o* .           |
+|*BE o            |
+|XBoo             |
++----[SHA256]-----+
+root@jenkins:~/jenkins-project# cat /root/.ssh/id_rsa.
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEgYVlBOvPqqzjOmyfDZAqObvThqY8c8L33RxTU/PWdiW1fzm4ysSnxRkbkdTUnv33jYV9DSHvP9NVXPP1MJPuACBAey+9Q2F9AbeZJPNcPvyAL6YXNPRLZVK3WeWs6h+Mn86h16HUj4YO7Y63eyq8qqyQD5nFyS9C3OsLTma4LKkZSmwpVUU0vcyzWCeT3pIhxuxm+8QcTiaSyyjhLc9RI4LoMG7NGUr7qDY8rFVfIxYwK9cNC9of+CD1Z8vZtC/dEoBq2sFd48urTpWl+G6CgVPcMPAdkGjkAqI93/CYpHRGTkaS/d7ddhywwSsWxTx4DwQIrZ1tjIe9hw+xJPnkins
+root@jenkins:~/jenkins-project#
+root@jenkins:~/jenkins-project# ^C
+root@jenkins:~/jenkins-project# git branch -M main
+root@jenkins:~/jenkins-project# git remote add origin nkins.git
+root@jenkins:~/jenkins-project# git push -u origin mai
+The authenticity of host 'github.com (20.207.73.82)' c
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZis
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[
+Warning: Permanently added 'github.com' (ED25519) to t
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 196 bytes | 196.00 KiB/s,
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:qtpbuddy/jenkins.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' fro
+root@jenkins:~/jenkins-project# git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+root@jenkins:~/jenkins-project# ls -la
+total 12
+drwxr-xr-x 3 root root 4096 Jul  4 11:43 .
+drwx------ 5 root root 4096 Jul  4 11:53 ..
+-rw-r--r-- 1 root root    0 Jul  4 11:43 a
+drwxr-xr-x 8 root root 4096 Jul  5 10:04 .git
+root@jenkins:~/jenkins-project# curl -fsSL https://pkgjenkins.io-2023.key | sudo tee \
+    /usr/share/keyrings/jenkins-keyring.asc > /dev/nul
+root@jenkins:~/jenkins-project#  echo deb [signed-by=/-keyring.asc] \
+    https://pkg.jenkins.io/debian-stable binary/ | sud
+    /etc/apt/sources.list.d/jenkins.list > /dev/null
+root@jenkins:~/jenkins-project# sudo apt-get update
+  sudo apt-get install fontconfig openjdk-11-jre
+  sudo apt-get install jenkins
+Ign:1 https://pkg.jenkins.io/debian-stable binary/ InR
+Get:2 https://pkg.jenkins.io/debian-stable binary/ Rel
+Get:3 https://pkg.jenkins.io/debian-stable binary/ Rel
+Get:4 https://pkg.jenkins.io/debian-stable binary/ Pac
+Hit:5 http://in.archive.ubuntu.com/ubuntu jammy InRele
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy-update
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy-backpo
+Get:8 http://in.archive.ubuntu.com/ubuntu jammy-securi
+Fetched 365 kB in 2s (154 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  alsa-topology-conf alsa-ucm-conf at-spi2-core ca-cer
+  dconf-gsettings-backend dconf-service fontconfig-con
+  fonts-dejavu-extra gsettings-desktop-schemas java-co
+  libasound2-data libatk-bridge2.0-0 libatk-wrapper-ja
+  libatk-wrapper-java-jni libatk1.0-0 libatk1.0-data l
+  libavahi-client3 libavahi-common-data libavahi-commo
+  libdrm-amdgpu1 libdrm-intel1 libdrm-nouveau2 libdrm-
+  libfontenc1 libgif7 libgl1 libgl1-amber-dri libgl1-m
+  libglvnd0 libglx-mesa0 libglx0 libgraphite2-3 libhar
+  libjpeg-turbo8 libjpeg8 liblcms2-2 libllvm15 libpcia
+  libsensors-config libsensors5 libsm6 libx11-xcb1 lib
+  libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-sha
+  libxcb-sync1 libxcb-xfixes0 libxcomposite1 libxfixes
+  libxinerama1 libxkbfile1 libxmu6 libxpm4 libxrandr2
+  libxshmfence1 libxt6 libxtst6 libxv1 libxxf86dga1 li
+  openjdk-11-jre-headless session-migration x11-common
+Suggested packages:
+  default-jre libasound2-plugins alsa-utils cups-commo
+  lm-sensors libnss-mdns fonts-ipafont-gothic fonts-ip
+  fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic me
+The following NEW packages will be installed:
+  alsa-topology-conf alsa-ucm-conf at-spi2-core ca-cer
+  dconf-gsettings-backend dconf-service fontconfig fon
+  fonts-dejavu-core fonts-dejavu-extra gsettings-deskt
+  libasound2 libasound2-data libatk-bridge2.0-0 libatk
+  libatk-wrapper-java-jni libatk1.0-0 libatk1.0-data l
+  libavahi-client3 libavahi-common-data libavahi-commo
+  libdrm-amdgpu1 libdrm-intel1 libdrm-nouveau2 libdrm-
+  libfontenc1 libgif7 libgl1 libgl1-amber-dri libgl1-m
+  libglvnd0 libglx-mesa0 libglx0 libgraphite2-3 libhar
+  libjpeg-turbo8 libjpeg8 liblcms2-2 libllvm15 libpcia
+  libsensors-config libsensors5 libsm6 libx11-xcb1 lib
+  libxcb-dri3-0 libxcb-glx0 libxcb-present0 libxcb-sha
+  libxcb-sync1 libxcb-xfixes0 libxcomposite1 libxfixes
+  libxinerama1 libxkbfile1 libxmu6 libxpm4 libxrandr2
+  libxshmfence1 libxt6 libxtst6 libxv1 libxxf86dga1 li
+  openjdk-11-jre-headless session-migration x11-common
+0 upgraded, 82 newly installed, 0 to remove and 60 not
+Need to get 87.3 MB of archives.
+After this operation, 362 MB of additional disk space
+Do you want to continue? [Y/n] Y
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/main al 1.2.5.1-2 [15.5 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu jammy/main a.2.6.1-1ubuntu1 [19.1 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy/main a6.1-1ubuntu1 [390 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy-update all 1.2.6.3-1ubuntu1.6 [41.8 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy/main auild1 [32.6 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy/main a.44.0-3 [80.9 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy/main a23ubuntu2 [23.4 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu jammy/main a3-1build4 [13.4 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy/main a0-3 [40.5 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu jammy/main 0.40.0-3 [28.5 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu jammy/main end amd64 0.40.0-3 [22.8 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu jammy/main d64 0.3.6 [9,774 B]
+Get:13 http://in.archive.ubuntu.com/ubuntu jammy/main hemas all 42.0-1ubuntu1 [31.1 kB]
+Get:14 http://in.archive.ubuntu.com/ubuntu jammy/main .44.0-3 [54.4 kB]
+Get:15 http://in.archive.ubuntu.com/ubuntu jammy/main build2 [6,782 B]
+Get:16 http://in.archive.ubuntu.com/ubuntu jammy-updatmon-data amd64 0.8-5ubuntu5.1 [23.5 kB]
+Get:17 http://in.archive.ubuntu.com/ubuntu jammy-updatmon3 amd64 0.8-5ubuntu5.1 [23.7 kB]
+Get:18 http://in.archive.ubuntu.com/ubuntu jammy-updatent3 amd64 0.8-5ubuntu5.1 [28.0 kB]
+Get:19 http://in.archive.ubuntu.com/ubuntu jammy-updat64 2.4.1op1-1ubuntu4.4 [264 kB]
+Get:20 http://in.archive.ubuntu.com/ubuntu jammy/main 2~rc1-2build2 [159 kB]
+Get:21 http://in.archive.ubuntu.com/ubuntu jammy/main  2.1.2-0ubuntu1 [134 kB]
+Get:22 http://in.archive.ubuntu.com/ubuntu jammy/main buntu10 [2,264 B]
+Get:23 http://in.archive.ubuntu.com/ubuntu jammy/main l 2.37-2build1 [1,041 kB]
+Get:24 http://in.archive.ubuntu.com/ubuntu jammy/main l 2.13.1-4.2ubuntu5 [29.1 kB]
+Get:25 http://in.archive.ubuntu.com/ubuntu jammy/main  2.13.1-4.2ubuntu5 [131 kB]
+Get:26 http://in.archive.ubuntu.com/ubuntu jammy/main  1.3.14-1build2 [71.3 kB]
+Get:27 http://in.archive.ubuntu.com/ubuntu jammy-updatb amd64 2.7.4-1ubuntu3.1 [352 kB]
+Get:28 http://in.archive.ubuntu.com/ubuntu jammy/main .9.5-3 [19.9 kB]
+Get:29 http://in.archive.ubuntu.com/ubuntu jammy-updatre-headless amd64 11.0.19+7~us1-0ubuntu1~22.04.1 [42.5
+Get:30 http://in.archive.ubuntu.com/ubuntu jammy-updattes-java all 20190909ubuntu1.2 [12.1 kB]
+Get:31 http://in.archive.ubuntu.com/ubuntu jammy/main 3.1-4.2ubuntu5 [177 kB]
+Get:32 http://in.archive.ubuntu.com/ubuntu jammy/main ll 2.37-2build1 [2,041 kB]
+Get:33 http://in.archive.ubuntu.com/ubuntu jammy/main .36.0-3build1 [2,824 B]
+Get:34 http://in.archive.ubuntu.com/ubuntu jammy/main 36.0-3build1 [51.9 kB]
+Get:35 http://in.archive.ubuntu.com/ubuntu jammy/main md64 2.38.0-3 [66.6 kB]
+Get:36 http://in.archive.ubuntu.com/ubuntu jammy/main 1.1.4-1build3 [14.7 kB]
+Get:37 http://in.archive.ubuntu.com/ubuntu jammy/main 0-1 [73.6 kB]
+Get:38 http://in.archive.ubuntu.com/ubuntu jammy-updata amd64 22.2.5-0ubuntu0.1~22.04.3 [35.5 kB]
+Get:39 http://in.archive.ubuntu.com/ubuntu jammy-updatamd64 2:1.7.5-1ubuntu0.2 [7,800 B]
+Get:40 http://in.archive.ubuntu.com/ubuntu jammy/main 1.14-3ubuntu3 [7,206 B]
+Get:41 http://in.archive.ubuntu.com/ubuntu jammy/main 1.14-3ubuntu3 [6,968 B]
+Get:42 http://in.archive.ubuntu.com/ubuntu jammy/main 14-3ubuntu3 [25.9 kB]
+Get:43 http://in.archive.ubuntu.com/ubuntu jammy/main 4 1.14-3ubuntu3 [5,734 B]
+Get:44 http://in.archive.ubuntu.com/ubuntu jammy/main 14-3ubuntu3 [5,780 B]
+Get:45 http://in.archive.ubuntu.com/ubuntu jammy/main .14-3ubuntu3 [9,416 B]
+Get:46 http://in.archive.ubuntu.com/ubuntu jammy/main  1.14-3ubuntu3 [9,996 B]
+Get:47 http://in.archive.ubuntu.com/ubuntu jammy/main .0.0-1 [11.7 kB]
+Get:48 http://in.archive.ubuntu.com/ubuntu jammy/main 1.3-1build4 [5,394 B]
+Get:49 http://in.archive.ubuntu.com/ubuntu jammy/main 1.1.4-1build3 [10.4 kB]
+Get:50 http://in.archive.ubuntu.com/ubuntu jammy-updatu1 amd64 2.4.113-2~ubuntu0.22.04.1 [19.9 kB]
+Get:51 http://in.archive.ubuntu.com/ubuntu jammy-updatau2 amd64 2.4.113-2~ubuntu0.22.04.1 [17.5 kB]
+Get:52 http://in.archive.ubuntu.com/ubuntu jammy-updatn1 amd64 2.4.113-2~ubuntu0.22.04.1 [21.6 kB]
+Get:53 http://in.archive.ubuntu.com/ubuntu jammy-updatd64 1:15.0.7-0ubuntu0.22.04.1 [25.4 MB]
+Get:54 http://in.archive.ubuntu.com/ubuntu jammy/main l 1:3.6.0-7ubuntu1 [5,274 B]
+Get:55 http://in.archive.ubuntu.com/ubuntu jammy/main 3.6.0-7ubuntu1 [26.3 kB]
+Get:56 http://in.archive.ubuntu.com/ubuntu jammy-updatdri amd64 22.2.5-0ubuntu0.1~22.04.3 [7,511 kB]
+Get:57 http://in.archive.ubuntu.com/ubuntu jammy-updat amd64 22.2.5-0ubuntu0.1~22.04.3 [158 kB]
+Get:58 http://in.archive.ubuntu.com/ubuntu jammy/main 1 [41.0 kB]
+Get:59 http://in.archive.ubuntu.com/ubuntu jammy/main  [110 kB]
+Get:60 http://in.archive.ubuntu.com/ubuntu jammy/main 10-1build2 [42.6 kB]
+Get:61 http://in.archive.ubuntu.com/ubuntu jammy/main -1build2 [16.7 kB]
+Get:62 http://in.archive.ubuntu.com/ubuntu jammy/main -1 [177 kB]
+Get:63 http://in.archive.ubuntu.com/ubuntu jammy/main 3-3 [49.6 kB]
+Get:64 http://in.archive.ubuntu.com/ubuntu jammy-updat4 1:3.5.12-1ubuntu0.22.04.1 [36.4 kB]
+Get:65 http://in.archive.ubuntu.com/ubuntu jammy/main 14-1 [191 kB]
+Get:66 http://in.archive.ubuntu.com/ubuntu jammy/main 1.14-3ubuntu3 [6,158 B]
+Get:67 http://in.archive.ubuntu.com/ubuntu jammy/main  1:0.4.5-1build2 [7,192 B]
+Get:68 http://in.archive.ubuntu.com/ubuntu jammy/main 0.9.10-1build4 [19.7 kB]
+Get:69 http://in.archive.ubuntu.com/ubuntu jammy/main 1 [41.8 kB]
+Get:70 http://in.archive.ubuntu.com/ubuntu jammy/main :1.1.4-3 [7,382 B]
+Get:71 http://in.archive.ubuntu.com/ubuntu jammy/main 1.1.0-1build3 [71.8 kB]
+Get:72 http://in.archive.ubuntu.com/ubuntu jammy/main .5.2-1build1 [20.4 kB]
+Get:73 http://in.archive.ubuntu.com/ubuntu jammy/main 1-1build2 [11.2 kB]
+Get:74 http://in.archive.ubuntu.com/ubuntu jammy/main :1.1.5-0ubuntu3 [12.6 kB]
+Get:75 http://in.archive.ubuntu.com/ubuntu jammy/main 5build2 [206 kB]
+Get:76 http://in.archive.ubuntu.com/ubuntu jammy/main all 0.38.0-5build1 [53.1 kB]
+Get:77 http://in.archive.ubuntu.com/ubuntu jammy/main jni amd64 0.38.0-5build1 [49.0 kB]
+Get:78 http://in.archive.ubuntu.com/ubuntu jammy/main 0.16-3 [19.1 kB]
+Get:79 http://in.archive.ubuntu.com/ubuntu jammy-updat1 amd64 2.4.113-2~ubuntu0.22.04.1 [66.7 kB]
+Get:80 http://in.archive.ubuntu.com/ubuntu jammy/main 2build2 [33.8 kB]
+Get:81 http://in.archive.ubuntu.com/ubuntu jammy/main 64 21.3.7-0ubuntu1 [4,433 kB]
+Get:82 http://in.archive.ubuntu.com/ubuntu jammy-updatre amd64 11.0.19+7~us1-0ubuntu1~22.04.1 [213 kB]
+Fetched 87.3 MB in 46s (1,893 kB/s)
+Extracting templates from packages: 100%
+Selecting previously unselected package alsa-topology-
+(Reading database ... 73998 files and directories curr
+Preparing to unpack .../00-alsa-topology-conf_1.2.5.1-
+Unpacking alsa-topology-conf (1.2.5.1-2) ...
+Selecting previously unselected package libasound2-dat
+Preparing to unpack .../01-libasound2-data_1.2.6.1-1ub
+Unpacking libasound2-data (1.2.6.1-1ubuntu1) ...
+Selecting previously unselected package libasound2:amd
+Preparing to unpack .../02-libasound2_1.2.6.1-1ubuntu1
+Unpacking libasound2:amd64 (1.2.6.1-1ubuntu1) ...
+Selecting previously unselected package alsa-ucm-conf.
+Preparing to unpack .../03-alsa-ucm-conf_1.2.6.3-1ubun
+Unpacking alsa-ucm-conf (1.2.6.3-1ubuntu1.6) ...
+Selecting previously unselected package libxi6:amd64.
+Preparing to unpack .../04-libxi6_2%3a1.8-1build1_amd6
+Unpacking libxi6:amd64 (2:1.8-1build1) ...
+Selecting previously unselected package libatspi2.0-0:
+Preparing to unpack .../05-libatspi2.0-0_2.44.0-3_amd6
+Unpacking libatspi2.0-0:amd64 (2.44.0-3) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../06-x11-common_1%3a7.7+23ubuntu
+Unpacking x11-common (1:7.7+23ubuntu2) ...
+Selecting previously unselected package libxtst6:amd64
+Preparing to unpack .../07-libxtst6_2%3a1.2.3-1build4_
+Unpacking libxtst6:amd64 (2:1.2.3-1build4) ...
+Selecting previously unselected package libdconf1:amd6
+Preparing to unpack .../08-libdconf1_0.40.0-3_amd64.de
+Unpacking libdconf1:amd64 (0.40.0-3) ...
+Selecting previously unselected package dconf-service.
+Preparing to unpack .../09-dconf-service_0.40.0-3_amd6
+Unpacking dconf-service (0.40.0-3) ...
+Selecting previously unselected package dconf-gsetting
+Preparing to unpack .../10-dconf-gsettings-backend_0.4
+Unpacking dconf-gsettings-backend:amd64 (0.40.0-3) ...
+Selecting previously unselected package session-migrat
+Preparing to unpack .../11-session-migration_0.3.6_amd
+Unpacking session-migration (0.3.6) ...
+Selecting previously unselected package gsettings-desk
+Preparing to unpack .../12-gsettings-desktop-schemas_4
+Unpacking gsettings-desktop-schemas (42.0-1ubuntu1) ..
+Selecting previously unselected package at-spi2-core.
+Preparing to unpack .../13-at-spi2-core_2.44.0-3_amd64
+Unpacking at-spi2-core (2.44.0-3) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../14-java-common_0.72build2_all.
+Unpacking java-common (0.72build2) ...
+Selecting previously unselected package libavahi-commo
+Preparing to unpack .../15-libavahi-common-data_0.8-5u
+Unpacking libavahi-common-data:amd64 (0.8-5ubuntu5.1)
+Selecting previously unselected package libavahi-commo
+Preparing to unpack .../16-libavahi-common3_0.8-5ubunt
+Unpacking libavahi-common3:amd64 (0.8-5ubuntu5.1) ...
+Selecting previously unselected package libavahi-clien
+Preparing to unpack .../17-libavahi-client3_0.8-5ubunt
+Unpacking libavahi-client3:amd64 (0.8-5ubuntu5.1) ...
+Selecting previously unselected package libcups2:amd64
+Preparing to unpack .../18-libcups2_2.4.1op1-1ubuntu4.
+Unpacking libcups2:amd64 (2.4.1op1-1ubuntu4.4) ...
+Selecting previously unselected package liblcms2-2:amd
+Preparing to unpack .../19-liblcms2-2_2.12~rc1-2build2
+Unpacking liblcms2-2:amd64 (2.12~rc1-2build2) ...
+Selecting previously unselected package libjpeg-turbo8
+Preparing to unpack .../20-libjpeg-turbo8_2.1.2-0ubunt
+Unpacking libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Selecting previously unselected package libjpeg8:amd64
+Preparing to unpack .../21-libjpeg8_8c-2ubuntu10_amd64
+Unpacking libjpeg8:amd64 (8c-2ubuntu10) ...
+Selecting previously unselected package fonts-dejavu-c
+Preparing to unpack .../22-fonts-dejavu-core_2.37-2bui
+Unpacking fonts-dejavu-core (2.37-2build1) ...
+Selecting previously unselected package fontconfig-con
+Preparing to unpack .../23-fontconfig-config_2.13.1-4.
+Unpacking fontconfig-config (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libfontconfig1
+Preparing to unpack .../24-libfontconfig1_2.13.1-4.2ub
+Unpacking libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package libgraphite2-3
+Preparing to unpack .../25-libgraphite2-3_1.3.14-1buil
+Unpacking libgraphite2-3:amd64 (1.3.14-1build2) ...
+Selecting previously unselected package libharfbuzz0b:
+Preparing to unpack .../26-libharfbuzz0b_2.7.4-1ubuntu
+Unpacking libharfbuzz0b:amd64 (2.7.4-1ubuntu3.1) ...
+Selecting previously unselected package libpcsclite1:a
+Preparing to unpack .../27-libpcsclite1_1.9.5-3_amd64.
+Unpacking libpcsclite1:amd64 (1.9.5-3) ...
+Selecting previously unselected package openjdk-11-jre
+Preparing to unpack .../28-openjdk-11-jre-headless_11.1_amd64.deb ...
+Unpacking openjdk-11-jre-headless:amd64 (11.0.19+7~us1
+Selecting previously unselected package ca-certificate
+Preparing to unpack .../29-ca-certificates-java_201909
+Unpacking ca-certificates-java (20190909ubuntu1.2) ...
+Selecting previously unselected package fontconfig.
+Preparing to unpack .../30-fontconfig_2.13.1-4.2ubuntu
+Unpacking fontconfig (2.13.1-4.2ubuntu5) ...
+Selecting previously unselected package fonts-dejavu-e
+Preparing to unpack .../31-fonts-dejavu-extra_2.37-2bu
+Unpacking fonts-dejavu-extra (2.37-2build1) ...
+Selecting previously unselected package libatk1.0-data
+Preparing to unpack .../32-libatk1.0-data_2.36.0-3buil
+Unpacking libatk1.0-data (2.36.0-3build1) ...
+Selecting previously unselected package libatk1.0-0:am
+Preparing to unpack .../33-libatk1.0-0_2.36.0-3build1_
+Unpacking libatk1.0-0:amd64 (2.36.0-3build1) ...
+Selecting previously unselected package libatk-bridge2
+Preparing to unpack .../34-libatk-bridge2.0-0_2.38.0-3
+Unpacking libatk-bridge2.0-0:amd64 (2.38.0-3) ...
+Selecting previously unselected package libfontenc1:am
+Preparing to unpack .../35-libfontenc1_1%3a1.1.4-1buil
+Unpacking libfontenc1:amd64 (1:1.1.4-1build3) ...
+Selecting previously unselected package libglvnd0:amd6
+Preparing to unpack .../36-libglvnd0_1.4.0-1_amd64.deb
+Unpacking libglvnd0:amd64 (1.4.0-1) ...
+Selecting previously unselected package libglapi-mesa:
+Preparing to unpack .../37-libglapi-mesa_22.2.5-0ubunt
+Unpacking libglapi-mesa:amd64 (22.2.5-0ubuntu0.1~22.04
+Selecting previously unselected package libx11-xcb1:am
+Preparing to unpack .../38-libx11-xcb1_2%3a1.7.5-1ubun
+Unpacking libx11-xcb1:amd64 (2:1.7.5-1ubuntu0.2) ...
+Selecting previously unselected package libxcb-dri2-0:
+Preparing to unpack .../39-libxcb-dri2-0_1.14-3ubuntu3
+Unpacking libxcb-dri2-0:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxcb-dri3-0:
+Preparing to unpack .../40-libxcb-dri3-0_1.14-3ubuntu3
+Unpacking libxcb-dri3-0:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxcb-glx0:am
+Preparing to unpack .../41-libxcb-glx0_1.14-3ubuntu3_a
+Unpacking libxcb-glx0:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxcb-present
+Preparing to unpack .../42-libxcb-present0_1.14-3ubunt
+Unpacking libxcb-present0:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxcb-shm0:am
+Preparing to unpack .../43-libxcb-shm0_1.14-3ubuntu3_a
+Unpacking libxcb-shm0:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxcb-sync1:a
+Preparing to unpack .../44-libxcb-sync1_1.14-3ubuntu3_
+Unpacking libxcb-sync1:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxcb-xfixes0
+Preparing to unpack .../45-libxcb-xfixes0_1.14-3ubuntu
+Unpacking libxcb-xfixes0:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxfixes3:amd
+Preparing to unpack .../46-libxfixes3_1%3a6.0.0-1_amd6
+Unpacking libxfixes3:amd64 (1:6.0.0-1) ...
+Selecting previously unselected package libxshmfence1:
+Preparing to unpack .../47-libxshmfence1_1.3-1build4_a
+Unpacking libxshmfence1:amd64 (1.3-1build4) ...
+Selecting previously unselected package libxxf86vm1:am
+Preparing to unpack .../48-libxxf86vm1_1%3a1.1.4-1buil
+Unpacking libxxf86vm1:amd64 (1:1.1.4-1build3) ...
+Selecting previously unselected package libdrm-amdgpu1
+Preparing to unpack .../49-libdrm-amdgpu1_2.4.113-2~ub.
+Unpacking libdrm-amdgpu1:amd64 (2.4.113-2~ubuntu0.22.0
+Selecting previously unselected package libdrm-nouveau
+Preparing to unpack .../50-libdrm-nouveau2_2.4.113-2~u..
+Unpacking libdrm-nouveau2:amd64 (2.4.113-2~ubuntu0.22.
+Selecting previously unselected package libdrm-radeon1
+Preparing to unpack .../51-libdrm-radeon1_2.4.113-2~ub.
+Unpacking libdrm-radeon1:amd64 (2.4.113-2~ubuntu0.22.0
+Selecting previously unselected package libllvm15:amd6
+Preparing to unpack .../52-libllvm15_1%3a15.0.7-0ubunt
+Unpacking libllvm15:amd64 (1:15.0.7-0ubuntu0.22.04.1)
+Selecting previously unselected package libsensors-con
+Preparing to unpack .../53-libsensors-config_1%3a3.6.0
+Unpacking libsensors-config (1:3.6.0-7ubuntu1) ...
+Selecting previously unselected package libsensors5:am
+Preparing to unpack .../54-libsensors5_1%3a3.6.0-7ubun
+Unpacking libsensors5:amd64 (1:3.6.0-7ubuntu1) ...
+Selecting previously unselected package libgl1-mesa-dr
+Preparing to unpack .../55-libgl1-mesa-dri_22.2.5-0ubu..
+Unpacking libgl1-mesa-dri:amd64 (22.2.5-0ubuntu0.1~22.
+Selecting previously unselected package libglx-mesa0:a
+Preparing to unpack .../56-libglx-mesa0_22.2.5-0ubuntu
+Unpacking libglx-mesa0:amd64 (22.2.5-0ubuntu0.1~22.04.
+Selecting previously unselected package libglx0:amd64.
+Preparing to unpack .../57-libglx0_1.4.0-1_amd64.deb .
+Unpacking libglx0:amd64 (1.4.0-1) ...
+Selecting previously unselected package libgl1:amd64.
+Preparing to unpack .../58-libgl1_1.4.0-1_amd64.deb ..
+Unpacking libgl1:amd64 (1.4.0-1) ...
+Selecting previously unselected package libice6:amd64.
+Preparing to unpack .../59-libice6_2%3a1.0.10-1build2_
+Unpacking libice6:amd64 (2:1.0.10-1build2) ...
+Selecting previously unselected package libsm6:amd64.
+Preparing to unpack .../60-libsm6_2%3a1.2.3-1build2_am
+Unpacking libsm6:amd64 (2:1.2.3-1build2) ...
+Selecting previously unselected package libxt6:amd64.
+Preparing to unpack .../61-libxt6_1%3a1.2.1-1_amd64.de
+Unpacking libxt6:amd64 (1:1.2.1-1) ...
+Selecting previously unselected package libxmu6:amd64.
+Preparing to unpack .../62-libxmu6_2%3a1.1.3-3_amd64.d
+Unpacking libxmu6:amd64 (2:1.1.3-3) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../63-libxpm4_1%3a3.5.12-1ubuntu0
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.1) ..
+Selecting previously unselected package libxaw7:amd64.
+Preparing to unpack .../64-libxaw7_2%3a1.0.14-1_amd64.
+Unpacking libxaw7:amd64 (2:1.0.14-1) ...
+Selecting previously unselected package libxcb-shape0:
+Preparing to unpack .../65-libxcb-shape0_1.14-3ubuntu3
+Unpacking libxcb-shape0:amd64 (1.14-3ubuntu3) ...
+Selecting previously unselected package libxcomposite1
+Preparing to unpack .../66-libxcomposite1_1%3a0.4.5-1b
+Unpacking libxcomposite1:amd64 (1:0.4.5-1build2) ...
+Selecting previously unselected package libxrender1:am
+Preparing to unpack .../67-libxrender1_1%3a0.9.10-1bui
+Unpacking libxrender1:amd64 (1:0.9.10-1build4) ...
+Selecting previously unselected package libxft2:amd64.
+Preparing to unpack .../68-libxft2_2.3.4-1_amd64.deb .
+Unpacking libxft2:amd64 (2.3.4-1) ...
+Selecting previously unselected package libxinerama1:a
+Preparing to unpack .../69-libxinerama1_2%3a1.1.4-3_am
+Unpacking libxinerama1:amd64 (2:1.1.4-3) ...
+Selecting previously unselected package libxkbfile1:am
+Preparing to unpack .../70-libxkbfile1_1%3a1.1.0-1buil
+Unpacking libxkbfile1:amd64 (1:1.1.0-1build3) ...
+Selecting previously unselected package libxrandr2:amd
+Preparing to unpack .../71-libxrandr2_2%3a1.5.2-1build
+Unpacking libxrandr2:amd64 (2:1.5.2-1build1) ...
+Selecting previously unselected package libxv1:amd64.
+Preparing to unpack .../72-libxv1_2%3a1.0.11-1build2_a
+Unpacking libxv1:amd64 (2:1.0.11-1build2) ...
+Selecting previously unselected package libxxf86dga1:a
+Preparing to unpack .../73-libxxf86dga1_2%3a1.1.5-0ubu
+Unpacking libxxf86dga1:amd64 (2:1.1.5-0ubuntu3) ...
+Selecting previously unselected package x11-utils.
+Preparing to unpack .../74-x11-utils_7.7+5build2_amd64
+Unpacking x11-utils (7.7+5build2) ...
+Selecting previously unselected package libatk-wrapper
+Preparing to unpack .../75-libatk-wrapper-java_0.38.0-
+Unpacking libatk-wrapper-java (0.38.0-5build1) ...
+Selecting previously unselected package libatk-wrapper
+Preparing to unpack .../76-libatk-wrapper-java-jni_0.3
+Unpacking libatk-wrapper-java-jni:amd64 (0.38.0-5build
+Selecting previously unselected package libpciaccess0:
+Preparing to unpack .../77-libpciaccess0_0.16-3_amd64.
+Unpacking libpciaccess0:amd64 (0.16-3) ...
+Selecting previously unselected package libdrm-intel1:
+Preparing to unpack .../78-libdrm-intel1_2.4.113-2~ubu
+Unpacking libdrm-intel1:amd64 (2.4.113-2~ubuntu0.22.04
+Selecting previously unselected package libgif7:amd64.
+Preparing to unpack .../79-libgif7_5.1.9-2build2_amd64
+Unpacking libgif7:amd64 (5.1.9-2build2) ...
+Selecting previously unselected package libgl1-amber-d
+Preparing to unpack .../80-libgl1-amber-dri_21.3.7-0ub
+Unpacking libgl1-amber-dri:amd64 (21.3.7-0ubuntu1) ...
+Selecting previously unselected package openjdk-11-jre
+Preparing to unpack .../81-openjdk-11-jre_11.0.19+7~useb ...
+Unpacking openjdk-11-jre:amd64 (11.0.19+7~us1-0ubuntu1
+Setting up libgraphite2-3:amd64 (1.3.14-1build2) ...
+Setting up libxcb-dri3-0:amd64 (1.14-3ubuntu3) ...
+Setting up liblcms2-2:amd64 (2.12~rc1-2build2) ...
+Setting up libx11-xcb1:amd64 (2:1.7.5-1ubuntu0.2) ...
+Setting up libpciaccess0:amd64 (0.16-3) ...
+Setting up session-migration (0.3.6) ...
+Created symlink /etc/systemd/user/graphical-session-prration.service → /usr/lib/systemd/user/session-migrati
+Setting up libdrm-nouveau2:amd64 (2.4.113-2~ubuntu0.22
+Setting up libxcb-xfixes0:amd64 (1.14-3ubuntu3) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.22.04.1) .
+Setting up libxi6:amd64 (2:1.8-1build1) ...
+Setting up java-common (0.72build2) ...
+Setting up libxrender1:amd64 (1:0.9.10-1build4) ...
+Setting up libdrm-radeon1:amd64 (2.4.113-2~ubuntu0.22.
+Setting up libglvnd0:amd64 (1.4.0-1) ...
+Setting up libxcb-glx0:amd64 (1.14-3ubuntu3) ...
+Setting up libdrm-intel1:amd64 (2.4.113-2~ubuntu0.22.0
+Setting up libxcb-shape0:amd64 (1.14-3ubuntu3) ...
+Setting up x11-common (1:7.7+23ubuntu2) ...
+Setting up libsensors-config (1:3.6.0-7ubuntu1) ...
+Setting up libxxf86dga1:amd64 (2:1.1.5-0ubuntu3) ...
+Setting up libxcb-shm0:amd64 (1.14-3ubuntu3) ...
+Setting up libatspi2.0-0:amd64 (2.44.0-3) ...
+Setting up libxxf86vm1:amd64 (1:1.1.4-1build3) ...
+Setting up libxcb-present0:amd64 (1.14-3ubuntu3) ...
+Setting up libdconf1:amd64 (0.40.0-3) ...
+Setting up libasound2-data (1.2.6.1-1ubuntu1) ...
+Setting up libfontenc1:amd64 (1:1.1.4-1build3) ...
+Setting up libxfixes3:amd64 (1:6.0.0-1) ...
+Setting up libxcb-sync1:amd64 (1.14-3ubuntu3) ...
+Setting up libavahi-common-data:amd64 (0.8-5ubuntu5.1)
+Setting up libxinerama1:amd64 (2:1.1.4-3) ...
+Setting up libxv1:amd64 (2:1.0.11-1build2) ...
+Setting up libxrandr2:amd64 (2:1.5.2-1build1) ...
+Setting up fonts-dejavu-core (2.37-2build1) ...
+Setting up libpcsclite1:amd64 (1.9.5-3) ...
+Setting up libsensors5:amd64 (1:3.6.0-7ubuntu1) ...
+Setting up libjpeg-turbo8:amd64 (2.1.2-0ubuntu1) ...
+Setting up libglapi-mesa:amd64 (22.2.5-0ubuntu0.1~22.0
+Setting up libxcb-dri2-0:amd64 (1.14-3ubuntu3) ...
+Setting up libgif7:amd64 (5.1.9-2build2) ...
+Setting up libatk1.0-data (2.36.0-3build1) ...
+Setting up fonts-dejavu-extra (2.37-2build1) ...
+Setting up alsa-topology-conf (1.2.5.1-2) ...
+Setting up libxshmfence1:amd64 (1.3-1build4) ...
+Setting up libllvm15:amd64 (1:15.0.7-0ubuntu0.22.04.1)
+Setting up libasound2:amd64 (1.2.6.1-1ubuntu1) ...
+Setting up libharfbuzz0b:amd64 (2.7.4-1ubuntu3.1) ...
+Setting up libatk1.0-0:amd64 (2.36.0-3build1) ...
+Setting up libxkbfile1:amd64 (1:1.1.0-1build3) ...
+Setting up libxcomposite1:amd64 (1:0.4.5-1build2) ...
+Setting up libdrm-amdgpu1:amd64 (2.4.113-2~ubuntu0.22.
+Setting up libjpeg8:amd64 (8c-2ubuntu10) ...
+Setting up libgl1-amber-dri:amd64 (21.3.7-0ubuntu1) ..
+Setting up libice6:amd64 (2:1.0.10-1build2) ...
+Setting up alsa-ucm-conf (1.2.6.3-1ubuntu1.6) ...
+Setting up fontconfig-config (2.13.1-4.2ubuntu5) ...
+Setting up libxtst6:amd64 (2:1.2.3-1build4) ...
+Setting up libgl1-mesa-dri:amd64 (22.2.5-0ubuntu0.1~22
+Setting up libavahi-common3:amd64 (0.8-5ubuntu5.1) ...
+Setting up dconf-service (0.40.0-3) ...
+Setting up libatk-bridge2.0-0:amd64 (2.38.0-3) ...
+Setting up libfontconfig1:amd64 (2.13.1-4.2ubuntu5) ..
+Setting up libsm6:amd64 (2:1.2.3-1build2) ...
+Setting up libavahi-client3:amd64 (0.8-5ubuntu5.1) ...
+Setting up fontconfig (2.13.1-4.2ubuntu5) ...
+Regenerating fonts cache... done.
+Setting up libxft2:amd64 (2.3.4-1) ...
+Setting up libglx-mesa0:amd64 (22.2.5-0ubuntu0.1~22.04
+Setting up libglx0:amd64 (1.4.0-1) ...
+Setting up dconf-gsettings-backend:amd64 (0.40.0-3) ..
+Setting up libgl1:amd64 (1.4.0-1) ...
+Setting up libxt6:amd64 (1:1.2.1-1) ...
+Setting up libcups2:amd64 (2.4.1op1-1ubuntu4.4) ...
+Setting up gsettings-desktop-schemas (42.0-1ubuntu1) .
+Setting up libxmu6:amd64 (2:1.1.3-3) ...
+Setting up libxaw7:amd64 (2:1.0.14-1) ...
+Setting up x11-utils (7.7+5build2) ...
+Setting up libatk-wrapper-java (0.38.0-5build1) ...
+Setting up libatk-wrapper-java-jni:amd64 (0.38.0-5buil
+Setting up openjdk-11-jre-headless:amd64 (11.0.19+7~us
+update-alternatives: using /usr/lib/jvm/java-11-openjde /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjd /usr/bin/jjs (jjs) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdvide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjde /usr/bin/rmid (rmid) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjd provide /usr/bin/rmiregistry (rmiregistry) in auto mo
+update-alternatives: using /usr/lib/jvm/java-11-openjdvide /usr/bin/pack200 (pack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdrovide /usr/bin/unpack200 (unpack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdde /usr/bin/jexec (jexec) in auto mode
+Setting up openjdk-11-jre:amd64 (11.0.19+7~us1-0ubuntu
+Setting up ca-certificates-java (20190909ubuntu1.2) ..
+head: cannot open '/etc/ssl/certs/java/cacerts' for reectory
+Adding debian:SSL.com_EV_Root_Certification_Authority_
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pe
+Adding debian:SSL.com_EV_Root_Certification_Authority_
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:Security_Communication_RootCA3.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:Entrust_Root_Certification_Authority_-_E
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:Certigna.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:Hellenic_Academic_and_Research_Instituti
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesio
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesio
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:E-Tugra_Global_Root_CA_ECC_v3.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:Hellenic_Academic_and_Research_Instituti
+Adding debian:E-Tugra_Global_Root_CA_RSA_v3.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority
+Adding debian:Trustwave_Global_ECC_P256_Certification_
+Adding debian:NAVER_Global_Root_Certification_Authorit
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:Izenpe.com.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:vTrus_Root_CA.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:Trustwave_Global_Certification_Authority
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pe
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Su
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_C
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:ACCVRAIZ1.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:ISRG_Root_X2.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:E-Tugra_Certification_Authority.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G
+Adding debian:Starfield_Services_Root_Certificate_Auth
+Adding debian:Hongkong_Post_Root_CA_1.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+done.
+Processing triggers for libglib2.0-0:amd64 (2.72.4-0ub
+Processing triggers for libc-bin (2.35-0ubuntu3.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ca-certificates (20230311ubunt
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+Setting up at-spi2-core (2.44.0-3) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) bi
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  net-tools
+The following NEW packages will be installed:
+  jenkins net-tools
+0 upgraded, 2 newly installed, 0 to remove and 60 not
+Need to get 95.8 MB of archives.
+After this operation, 99.3 MB of additional disk space
+Do you want to continue? [Y/n] Y
+Get:1 https://pkg.jenkins.io/debian-stable binary/ jen
+Get:2 http://in.archive.ubuntu.com/ubuntu jammy/main agit20181103.0eebece-1ubuntu5 [204 kB]
+Fetched 95.8 MB in 7s (13.2 MB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 75625 files and directories curr
+Preparing to unpack .../net-tools_1.60+git20181103.0ee.
+Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5
+Selecting previously unselected package jenkins.
+Preparing to unpack .../jenkins_2.401.2_all.deb ...
+Unpacking jenkins (2.401.2) ...
+Setting up net-tools (1.60+git20181103.0eebece-1ubuntu
+Setting up jenkins (2.401.2) ...
+Created symlink /etc/systemd/system/multi-user.target.ib/systemd/system/jenkins.service.
+Processing triggers for man-db (2.10.2-1) ...
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) bi
+root@jenkins:~/jenkins-project# status jenkins
+Command 'status' not found, did you mean:
+  command 'statup' from snap statup (0.79.91)
+  command 'qstatus' from deb gridengine-client (8.1.9+
+  command 'statfs' from deb gocryptfs (1.8.0-1build1)
+  command 'states' from deb enscript (1.6.5.90-3)
+See 'snap info <snapname>' for additional versions.
+root@jenkins:~/jenkins-project# sudo apt-get update
+  sudo apt-get install fontconfig openjdk-11-jre
+  sudo apt-get install jenkins
+Ign:1 https://pkg.jenkins.io/debian-stable binary/ InR
+Hit:2 https://pkg.jenkins.io/debian-stable binary/ Rel
+Hit:4 http://in.archive.ubuntu.com/ubuntu jammy InRele
+Hit:5 http://in.archive.ubuntu.com/ubuntu jammy-update
+Hit:6 http://in.archive.ubuntu.com/ubuntu jammy-backpo
+Hit:7 http://in.archive.ubuntu.com/ubuntu jammy-securi
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+fontconfig is already the newest version (2.13.1-4.2ub
+openjdk-11-jre is already the newest version (11.0.19+
+0 upgraded, 0 newly installed, 0 to remove and 60 not
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+jenkins is already the newest version (2.401.2).
+0 upgraded, 0 newly installed, 0 to remove and 60 not
+root@jenkins:~/jenkins-project# systemctl start jenkin
+root@jenkins:~/jenkins-project# systemctl status jenki
+● jenkins.service - Jenkins Continuous Integration Ser
+● jenkins.service - Jenkins Continuous Integration Ser
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.serv>
+     Active: active (running) since Wed 2023-07-05 10>
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless>
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24d>
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also >
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins C>
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:>
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.serv>
+     Active: active (running) since Wed 2023-07-05 10>
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless>
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24d>
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also >
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins C>
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:>
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.servi
+     Active: active (running) since Wed 2023-07-05 10:
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless=
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24db
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also b
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:13:33 jenkins jenkins[5894]: ***************
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins Co
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:1
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 2-20/20 (END)
+     Loaded: loaded (/lib/systemd/system/jenkins.serv>
+     Active: active (running) since Wed 2023-07-05 10>
+   Main PID: 5894 (java)
+      Tasks: 43 (limit: 4516)
+     Memory: 1.2G
+        CPU: 1min 59.862s
+     CGroup: /system.slice/jenkins.service
+             └─5894 /usr/bin/java -Djava.awt.headless>
+
+Jul 05 10:13:33 jenkins jenkins[5894]: c44a83238bb24d>
+Jul 05 10:13:33 jenkins jenkins[5894]: This may also >
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:13:33 jenkins jenkins[5894]: **************>
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:36 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:36 jenkins systemd[1]: Started Jenkins C>
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:>
+Jul 05 10:14:38 jenkins jenkins[5894]: 2023-07-05 10:>
+
+root@jenkins:~/jenkins-project# ip addr show
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:8d:78:9b brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 192.168.63.129/24 metric 100 brd 192.168.63.255 scope global dynamic ens33
+       valid_lft 1510sec preferred_lft 1510sec
+    inet6 fe80::20c:29ff:fe8d:789b/64 scope link
+       valid_lft forever preferred_lft forever
+root@jenkins:~/jenkins-project# cd /root
+root@jenkins:~# cat /var/lib/jenkins/serets/initialAdminPassword
+cat: /var/lib/jenkins/serets/initialAdminPassword: No such file or directory
+root@jenkins:~# /var/lib/jenkins/secrets/initialAdminPassword
+-bash: /var/lib/jenkins/secrets/initialAdminPassword: Permission denied
+root@jenkins:~# cat /var/lib/jenkins/secrets/initialAdminPassword
+c44a83238bb24db5ab23ae7fc79ca104
+root@jenkins:~# ^C
+root@jenkins:~# apt install maven -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libaopalliance-java libapache-pom-java
+  libatinject-jsr330-api-java libcdi-api-java
+  libcommons-cli-java libcommons-io-java
+  libcommons-lang3-java libcommons-parent-java
+  libgeronimo-annotation-1.3-spec-java
+  libgeronimo-interceptor-3.0-spec-java
+  libguava-java libguice-java
+  libhawtjni-runtime-java libjansi-java
+  libjansi-native-java libjsr305-java
+  libmaven-parent-java libmaven-resolver-java
+  libmaven-shared-utils-java libmaven3-core-java
+  libplexus-cipher-java libplexus-classworlds-java
+  libplexus-component-annotations-java
+  libplexus-interpolation-java
+  libplexus-sec-dispatcher-java
+  libplexus-utils2-java libsisu-inject-java
+  libsisu-plexus-java libslf4j-java
+  libwagon-file-java libwagon-http-shaded-java
+  libwagon-provider-api-java
+Suggested packages:
+  libaopalliance-java-doc
+  libatinject-jsr330-api-java-doc libel-api-java
+  libcommons-io-java-doc libcommons-lang3-java-doc
+  libasm-java libcglib-java libjsr305-java-doc
+  libmaven-shared-utils-java-doc liblogback-java
+  libplexus-classworlds-java-doc
+  libplexus-sec-dispatcher-java-doc
+  libplexus-utils2-java-doc junit4 testng
+  libcommons-logging-java liblog4j1.2-java
+The following NEW packages will be installed:
+  libaopalliance-java libapache-pom-java
+  libatinject-jsr330-api-java libcdi-api-java
+  libcommons-cli-java libcommons-io-java
+  libcommons-lang3-java libcommons-parent-java
+  libgeronimo-annotation-1.3-spec-java
+  libgeronimo-interceptor-3.0-spec-java
+  libguava-java libguice-java
+  libhawtjni-runtime-java libjansi-java
+  libjansi-native-java libjsr305-java
+  libmaven-parent-java libmaven-resolver-java
+  libmaven-shared-utils-java libmaven3-core-java
+  libplexus-cipher-java libplexus-classworlds-java
+  libplexus-component-annotations-java
+  libplexus-interpolation-java
+  libplexus-sec-dispatcher-java
+  libplexus-utils2-java libsisu-inject-java
+  libsisu-plexus-java libslf4j-java
+  libwagon-file-java libwagon-http-shaded-java
+  libwagon-provider-api-java maven
+0 upgraded, 33 newly installed, 0 to remove and 60 not upgraded.
+Need to get 10.2 MB of archives.
+After this operation, 13.3 MB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libapache-pom-java all 18-1 [4,720 B]
+Get:2 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libatinject-jsr330-api-java all 1.0+ds1-5 [5,348 B]
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libgeronimo-interceptor-3.0-spec-java all 1.0.1-4fakesync [8,616 B]
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libcdi-api-java all 1.2-3 [54.3 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libcommons-cli-java all 1.4-2 [55.8 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libcommons-parent-java all 43-1 [10.8 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libcommons-io-java all 2.11.0-2 [297 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libcommons-lang3-java all 3.11-1 [526 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libgeronimo-annotation-1.3-spec-java all 1.3-1 [11.2 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libjsr305-java all 0.1~+svn49-11 [27.0 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libguava-java all 29.0-6 [2,418 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libaopalliance-java all 20070526-6 [9,084 B]
+Get:13 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libguice-java all 4.2.3-2 [1,434 kB]
+Get:14 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libhawtjni-runtime-java all 1.17-1 [28.8 kB]
+Get:15 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libjansi-native-java all 1.8-1 [23.8 kB]
+Get:16 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libjansi-java all 1.18-1 [56.8 kB]
+Get:17 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libmaven-parent-java all 31-2 [5,140 B]
+Get:18 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libplexus-utils2-java all 3.3.0-1 [250 kB]
+Get:19 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libwagon-provider-api-java all 3.3.4-1 [48.5 kB]
+Get:20 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libmaven-resolver-java all 1.4.2-3build1 [555 kB]
+Get:21 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libmaven-shared-utils-java all 3.3.0-1 [149 kB]
+Get:22 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libplexus-cipher-java all 1.8-2 [15.1 kB]
+Get:23 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libplexus-classworlds-java all 2.6.0-1 [49.4 kB]
+Get:24 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libplexus-component-annotations-java all 2.1.0-1 [6,564 B]
+Get:25 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libplexus-interpolation-java all 1.26-1 [76.8 kB]
+Get:26 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libplexus-sec-dispatcher-java all 1.4-4 [28.1 kB]
+Get:27 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libslf4j-java all 1.7.32-1 [141 kB]
+Get:28 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libsisu-inject-java all 0.3.4-2 [347 kB]
+Get:29 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libsisu-plexus-java all 0.3.4-3 [181 kB]
+Get:30 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libmaven3-core-java all 3.6.3-5 [1,535 kB]
+Get:31 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libwagon-file-java all 3.3.4-1 [7,928 B]
+Get:32 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 libwagon-http-shaded-java all 3.3.4-1 [1,855 kB]
+Get:33 http://in.archive.ubuntu.com/ubuntu jammy/universe amd64 maven all 3.6.3-5 [17.8 kB]
+Fetched 10.2 MB in 12s (835 kB/s)
+Extracting templates from packages: 100%
+Selecting previously unselected package libapache-pom-java.
+(Reading database ... 75688 files and directories currently installed.)
+Preparing to unpack .../00-libapache-pom-java_18-1_all.deb ...
+Unpacking libapache-pom-java (18-1) ...
+Selecting previously unselected package libatinject-jsr330-api-java.
+Preparing to unpack .../01-libatinject-jsr330-api-java_1.0+ds1-5_all.deb ...
+Unpacking libatinject-jsr330-api-java (1.0+ds1-5) ...
+Selecting previously unselected package libgeronimo-interceptor-3.0-spec-java.
+Preparing to unpack .../02-libgeronimo-interceptor-3.0-spec-java_1.0.1-4fakesync_all.deb ...
+Unpacking libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+Selecting previously unselected package libcdi-api-java.
+Preparing to unpack .../03-libcdi-api-java_1.2-3_all.deb ...
+Unpacking libcdi-api-java (1.2-3) ...
+Selecting previously unselected package libcommons-cli-java.
+Preparing to unpack .../04-libcommons-cli-java_1.4-2_all.deb ...
+Unpacking libcommons-cli-java (1.4-2) ...
+Selecting previously unselected package libcommons-parent-java.
+Preparing to unpack .../05-libcommons-parent-java_43-1_all.deb ...
+Unpacking libcommons-parent-java (43-1) ...
+Selecting previously unselected package libcommons-io-java.
+Preparing to unpack .../06-libcommons-io-java_2.11.0-2_all.deb ...
+Unpacking libcommons-io-java (2.11.0-2) ...
+Selecting previously unselected package libcommons-lang3-java.
+Preparing to unpack .../07-libcommons-lang3-java_3.11-1_all.deb ...
+Unpacking libcommons-lang3-java (3.11-1) ...
+Selecting previously unselected package libgeronimo-annotation-1.3-spec-java.
+Preparing to unpack .../08-libgeronimo-annotation-1.3-spec-java_1.3-1_all.deb ...
+Unpacking libgeronimo-annotation-1.3-spec-java (1.3-1) ...
+Selecting previously unselected package libjsr305-java.
+Preparing to unpack .../09-libjsr305-java_0.1~+svn49-11_all.deb ...
+Unpacking libjsr305-java (0.1~+svn49-11) ...
+Selecting previously unselected package libguava-java.
+Preparing to unpack .../10-libguava-java_29.0-6_all.deb ...
+Unpacking libguava-java (29.0-6) ...
+Selecting previously unselected package libaopalliance-java.
+Preparing to unpack .../11-libaopalliance-java_20070526-6_all.deb ...
+Unpacking libaopalliance-java (20070526-6) ...
+Selecting previously unselected package libguice-java.
+Preparing to unpack .../12-libguice-java_4.2.3-2_all.deb ...
+Unpacking libguice-java (4.2.3-2) ...
+Selecting previously unselected package libhawtjni-runtime-java.
+Preparing to unpack .../13-libhawtjni-runtime-java_1.17-1_all.deb ...
+Unpacking libhawtjni-runtime-java (1.17-1) ...
+Selecting previously unselected package libjansi-native-java.
+Preparing to unpack .../14-libjansi-native-java_1.8-1_all.deb ...
+Unpacking libjansi-native-java (1.8-1) ...
+Selecting previously unselected package libjansi-java.
+Preparing to unpack .../15-libjansi-java_1.18-1_all.deb ...
+Unpacking libjansi-java (1.18-1) ...
+Selecting previously unselected package libmaven-parent-java.
+Preparing to unpack .../16-libmaven-parent-java_31-2_all.deb ...
+Unpacking libmaven-parent-java (31-2) ...
+Selecting previously unselected package libplexus-utils2-java.
+Preparing to unpack .../17-libplexus-utils2-java_3.3.0-1_all.deb ...
+Unpacking libplexus-utils2-java (3.3.0-1) ...
+Selecting previously unselected package libwagon-provider-api-java.
+Preparing to unpack .../18-libwagon-provider-api-java_3.3.4-1_all.deb ...
+Unpacking libwagon-provider-api-java (3.3.4-1) ...
+Selecting previously unselected package libmaven-resolver-java.
+Preparing to unpack .../19-libmaven-resolver-java_1.4.2-3build1_all.deb ...
+Unpacking libmaven-resolver-java (1.4.2-3build1) ...
+Selecting previously unselected package libmaven-shared-utils-java.
+Preparing to unpack .../20-libmaven-shared-utils-java_3.3.0-1_all.deb ...
+Unpacking libmaven-shared-utils-java (3.3.0-1) ...
+Selecting previously unselected package libplexus-cipher-java.
+Preparing to unpack .../21-libplexus-cipher-java_1.8-2_all.deb ...
+Unpacking libplexus-cipher-java (1.8-2) ...
+Selecting previously unselected package libplexus-classworlds-java.
+Preparing to unpack .../22-libplexus-classworlds-java_2.6.0-1_all.deb ...
+Unpacking libplexus-classworlds-java (2.6.0-1) ...
+Selecting previously unselected package libplexus-component-annotations-java.
+Preparing to unpack .../23-libplexus-component-annotations-java_2.1.0-1_all.deb ...
+Unpacking libplexus-component-annotations-java (2.1.0-1) ...
+Selecting previously unselected package libplexus-interpolation-java.
+Preparing to unpack .../24-libplexus-interpolation-java_1.26-1_all.deb ...
+Unpacking libplexus-interpolation-java (1.26-1) ...
+Selecting previously unselected package libplexus-sec-dispatcher-java.
+Preparing to unpack .../25-libplexus-sec-dispatcher-java_1.4-4_all.deb ...
+Unpacking libplexus-sec-dispatcher-java (1.4-4) ...
+Selecting previously unselected package libslf4j-java.
+Preparing to unpack .../26-libslf4j-java_1.7.32-1_all.deb ...
+Unpacking libslf4j-java (1.7.32-1) ...
+Selecting previously unselected package libsisu-inject-java.
+Preparing to unpack .../27-libsisu-inject-java_0.3.4-2_all.deb ...
+Unpacking libsisu-inject-java (0.3.4-2) ...
+Selecting previously unselected package libsisu-plexus-java.
+Preparing to unpack .../28-libsisu-plexus-java_0.3.4-3_all.deb ...
+Unpacking libsisu-plexus-java (0.3.4-3) ...
+Selecting previously unselected package libmaven3-core-java.
+Preparing to unpack .../29-libmaven3-core-java_3.6.3-5_all.deb ...
+Unpacking libmaven3-core-java (3.6.3-5) ...
+Selecting previously unselected package libwagon-file-java.
+Preparing to unpack .../30-libwagon-file-java_3.3.4-1_all.deb ...
+Unpacking libwagon-file-java (3.3.4-1) ...
+Selecting previously unselected package libwagon-http-shaded-java.
+Preparing to unpack .../31-libwagon-http-shaded-java_3.3.4-1_all.deb ...
+Unpacking libwagon-http-shaded-java (3.3.4-1) ...
+Selecting previously unselected package maven.
+Preparing to unpack .../32-maven_3.6.3-5_all.deb ...
+Unpacking maven (3.6.3-5) ...
+Setting up libslf4j-java (1.7.32-1) ...
+Setting up libplexus-utils2-java (3.3.0-1) ...
+Setting up libplexus-classworlds-java (2.6.0-1) ...
+Setting up libjsr305-java (0.1~+svn49-11) ...
+Setting up libaopalliance-java (20070526-6) ...
+Setting up libcommons-cli-java (1.4-2) ...
+Setting up libplexus-component-annotations-java (2.1.0-1) ...
+Setting up libplexus-cipher-java (1.8-2) ...
+Setting up libgeronimo-annotation-1.3-spec-java (1.3-1) ...
+Setting up libgeronimo-interceptor-3.0-spec-java (1.0.1-4fakesync) ...
+Setting up libapache-pom-java (18-1) ...
+Setting up libatinject-jsr330-api-java (1.0+ds1-5) ...
+Setting up libplexus-interpolation-java (1.26-1) ...
+Setting up libplexus-sec-dispatcher-java (1.4-4) ...
+Setting up libwagon-http-shaded-java (3.3.4-1) ...
+Setting up libcdi-api-java (1.2-3) ...
+Setting up libhawtjni-runtime-java (1.17-1) ...
+Setting up libwagon-provider-api-java (3.3.4-1) ...
+Setting up libmaven-parent-java (31-2) ...
+Setting up libcommons-parent-java (43-1) ...
+Setting up libsisu-inject-java (0.3.4-2) ...
+Setting up libsisu-plexus-java (0.3.4-3) ...
+Setting up libmaven-resolver-java (1.4.2-3build1) ...
+Setting up libguava-java (29.0-6) ...
+Setting up libcommons-lang3-java (3.11-1) ...
+Setting up libjansi-native-java (1.8-1) ...
+Setting up libwagon-file-java (3.3.4-1) ...
+Setting up libcommons-io-java (2.11.0-2) ...
+Setting up libguice-java (4.2.3-2) ...
+Setting up libjansi-java (1.18-1) ...
+Setting up libmaven-shared-utils-java (3.3.0-1) ...
+Setting up libmaven3-core-java (3.6.3-5) ...
+Setting up maven (3.6.3-5) ...
+update-alternatives: using /usr/share/maven/bin/mvn to provide /usr/bin/mvn (mvn) in auto mode
+Scanning processes...
+Scanning linux images...
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu)
+ binaries on this host.
+root@jenkins:~#
+root@jenkins:~#
